@@ -1,0 +1,20 @@
+package com.hanbit.kakao.presentation.message;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.hanbit.kakao.R;
+import com.hanbit.kakao.service.MessageServiceImpl;
+
+public class WriteActivity extends AppCompatActivity {
+
+    MessageServiceImpl service;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_write);
+
+        service = new MessageServiceImpl(this.getApplicationContext());
+    }
+}
